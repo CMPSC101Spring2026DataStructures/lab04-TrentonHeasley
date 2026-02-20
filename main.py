@@ -37,7 +37,7 @@ def get_computer_choice():
     """Randomly return 'rock', 'paper', or 'scissors'."""
     return random.choice(CHOICES)
 
-# Function to compare choices and decide the winner based on standard Rock-Paper-Scissors rules.
+# Function to compare choices and decide the winner.
 def determine_winner(user_choice, computer_choice):
     """Return 'user', 'computer', or 'tie' based on the choices."""
     if user_choice == computer_choice:
@@ -91,7 +91,8 @@ def main():
     console.print("\n[bold underline]Game Over![/bold underline]")
     console.print(f"[cyan]Your score: {user_score}[/cyan]")
     console.print(f"[magenta]Computer score: {computer_score}[/magenta]")
-
+	
+    # Announce overall winner
     if user_score > computer_score:
         console.print("[bold green]Congratulations, you win the game![/bold green]")
     elif computer_score > user_score:
